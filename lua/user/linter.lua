@@ -2,15 +2,15 @@
 local formatters = require "lvim.lsp.null-ls.formatters"
 
 formatters.setup {
-	{ command = "stylua" },
-	{
-		command = "prettier",
-		filetypes = { "typescript", "typescriptreact", "html", "tailwindcss", "json" },
-	},
+    { command = "stylua" },
+    {
+        command = "prettierd",
+        filetypes = { "typescript", "typescriptreact", "html", "tailwindcss", "json" },
+    },
 }
 
 local linters = require "lvim.lsp.null-ls.linters"
 
 linters.setup {
-	{ command = "eslint", filetypes = { "typescript", "typescriptreact" } }
+    { command = "eslint_d", filetypes = { "typescript", "typescriptreact" } }
 }
