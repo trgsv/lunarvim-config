@@ -1,7 +1,14 @@
 -- -- Additional Plugins <https://www.lunarvim.org/docs/plugins#user-plugins>
 lvim.plugins = {
     -- GitHub copilot
-    { "zbirenbaum/copilot.lua" },
+    {
+        "github/copilot.vim",
+        config = function()
+            vim.g.copilot_no_tab_map = true
+            vim.g.copilot_assume_mapped = true
+            vim.g.copilot_tab_fallback = ""
+        end,
+    },
     --
     --git diff in a single tabpage
     {
