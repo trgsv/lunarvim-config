@@ -7,6 +7,7 @@ formatters.setup {
         command = "prettierd",
         filetypes = { "typescript", "typescriptreact", "html", "tailwindcss", "json" },
     },
+    { command = "prettier", filetypes = { "tex" } },
 }
 
 local linters = require "lvim.lsp.null-ls.linters"
@@ -14,6 +15,6 @@ local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
     {
         command = "eslint_d",
-        filetypes = { "typescript", "typescriptreact" }
+        filetypes = { "javascript", "typescript", "typescriptreact" }
     }
 }
