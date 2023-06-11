@@ -1,20 +1,24 @@
 -- -- linters and formatters <https://www.lunarvim.org/docs/languages#lintingformatting>
-local formatters = require "lvim.lsp.null-ls.formatters"
+local formatters = require("lvim.lsp.null-ls.formatters")
 
-formatters.setup {
-    { command = "stylua" },
-    {
-        command = "prettierd",
-        filetypes = { "typescript", "typescriptreact", "html", "tailwindcss", "json" },
-    },
-    { command = "prettier", filetypes = { "tex" } },
-}
+formatters.setup({
+	{ command = "stylua" },
+	{
+		command = "prettierd",
+		filetypes = { "typescript", "typescriptreact", "html", "tailwindcss", "json" },
+	},
+	{
+		command = "eslint_d",
+		filetypes = { "typescript", "typescriptreact", "javascript", "svelte" },
+	},
+	{ command = "latexindent" },
+})
 
-local linters = require "lvim.lsp.null-ls.linters"
+local linters = require("lvim.lsp.null-ls.linters")
 
-linters.setup {
-    {
-        command = "eslint_d",
-        filetypes = { "javascript", "typescript", "typescriptreact" }
-    }
-}
+linters.setup({
+	{
+		command = "eslint_d",
+		filetypes = { "javascript", "typescript", "typescriptreact", "svelte" },
+	},
+})

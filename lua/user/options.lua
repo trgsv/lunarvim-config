@@ -14,8 +14,10 @@ lvim.leader = "space"
 -- add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 
-lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
-lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
+lvim.keys.normal_mode["<TAB>"] = ":BufferLineCycleNext<CR>"
+lvim.keys.normal_mode["<S-TAB>"] = ":BufferLineCyclePrev<CR>"
 
 lvim.keys.normal_mode["<C-d>"] = "zz<C-d>"
 lvim.keys.normal_mode["<C-u>"] = "zz<C-u>"
+
+lvim.keys.normal_mode["<leader>x"] = ":BufferKill<CR>"
