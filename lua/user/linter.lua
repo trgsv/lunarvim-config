@@ -22,5 +22,5 @@ linters.setup({
 		command = "eslint_d",
 		filetypes = { "javascript", "typescript", "typescriptreact", "svelte" },
 	},
-	{ command = "flake8", filetypes = { "python" } },
+	{ command = "flake8", filetypes = { "python" }, extra_args = { "--max-line-length", "88" } },
 })
