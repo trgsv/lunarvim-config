@@ -12,6 +12,7 @@ formatters.setup({
 		filetypes = { "typescript", "typescriptreact", "javascript", "svelte" },
 	},
 	{ command = "latexindent" },
+	{ command = "black", filetypes = { "python" } },
 })
 
 local linters = require("lvim.lsp.null-ls.linters")
@@ -21,4 +22,5 @@ linters.setup({
 		command = "eslint_d",
 		filetypes = { "javascript", "typescript", "typescriptreact", "svelte" },
 	},
+	{ command = "flake8", filetypes = { "python" } },
 })
