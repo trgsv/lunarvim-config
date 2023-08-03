@@ -63,6 +63,12 @@ lvim.plugins = {
 		},
 	},
 	{ "lervag/vimtex" },
+	{
+		"andrewferrier/wrapping.nvim",
+		config = function()
+			require("wrapping").setup()
+		end,
+	},
 }
 
 -- Can not be placed into the config method of the plugins.
