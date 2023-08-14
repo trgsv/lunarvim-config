@@ -14,6 +14,7 @@ formatters.setup({
 	{ command = "latexindent" },
 	{ command = "black", filetypes = { "python" } },
 	{ command = "taplo", filetypes = { "toml" } },
+	{ command = "beautysh", filetypes = { "bash", "csh", "ksh", "sh", "zsh" } },
 })
 
 local linters = require("lvim.lsp.null-ls.linters")
