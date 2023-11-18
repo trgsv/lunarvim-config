@@ -6,6 +6,9 @@ vim.opt.relativenumber = true
 lvim.log.level = "info"
 lvim.format_on_save = true
 
+-- Enable break indent
+vim.o.breakindent = true
+
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
