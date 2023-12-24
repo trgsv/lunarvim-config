@@ -11,7 +11,11 @@ formatters.setup({
 		command = "eslint_d",
 		filetypes = { "typescript", "typescriptreact", "javascript", "svelte" },
 	},
-	{ command = "latexindent" },
+	{
+		command = "latexindent",
+		filetypes = { "tex", "latex" },
+		extra_args = { "-l", vim.fn.expand("%:p:h") .. "/latexindent.yaml", "-m" },
+	},
 	{ command = "black", filetypes = { "python" } },
 	{ command = "taplo", filetypes = { "toml" } },
 	{ command = "beautysh", filetypes = { "bash", "csh", "ksh", "sh", "zsh" } },
