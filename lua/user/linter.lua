@@ -5,7 +5,7 @@ formatters.setup({
 	{ command = "stylua" },
 	{
 		command = "prettierd",
-		filetypes = { "typescript", "typescriptreact", "html", "tailwindcss", "json" },
+		filetypes = { "javascript", "typescript", "typescriptreact", "html", "tailwindcss", "json" },
 	},
 	{
 		command = "eslint_d",
@@ -28,5 +28,9 @@ linters.setup({
 		command = "eslint_d",
 		filetypes = { "javascript", "typescript", "typescriptreact", "svelte" },
 	},
-	{ command = "flake8", filetypes = { "python" }, extra_args = { "--max-line-length", "88" } },
+	{
+		command = "flake8",
+		filetypes = { "python" },
+		extra_args = { "--max-line-length", "80", "--select", "B950", "--ignore", "E203,E501,W503" },
+	},
 })
